@@ -1,0 +1,1 @@
+Due to legal constraints on confidentiality and privacy, certain files such as icons and .qss files are excluded from this folder.

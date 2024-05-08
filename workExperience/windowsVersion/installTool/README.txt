@@ -1,0 +1,1 @@
+I used Inno Setup 6 for the packaging and installation of the software I created, for the clients.

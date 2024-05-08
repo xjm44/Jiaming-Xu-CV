@@ -1,0 +1,1 @@
+Since software licensing terms and conditions, I created a software, which is a platform, to generate a unique passcode with a time limit for the clients to use.

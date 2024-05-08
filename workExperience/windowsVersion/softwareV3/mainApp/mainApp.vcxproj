@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4D602FD9-275E-4D33-9089-A82F967A7597}</ProjectGuid>
+    <Keyword>QtVS_v304</Keyword>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
+    <QtInstall>5.9.1_msvc2015_64</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+    <QtBuildConfig>debug</QtBuildConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
+    <QtInstall>5.9.1_msvc2015_64</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+    <QtBuildConfig>release</QtBuildConfig>
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\opt\ros\noetic\x64\include\OGRE;E:\vcpkg\vcpkg\installed\x64-windows\include\vtk-9.2;E:\vcpkg\vcpkg\installed\x64-windows\include;E:\easy3D\Easy3D\testzzz\applications\Mapple;E:\easy3D\Easy3D\testzzz\applications\Mapple\Mapple_autogen\include_Release;E:\easy3D\Easy3D\applications\Mapple;$(Qt_INCLUDEPATH_);E:\easy3D\Easy3D;E:\easy3D\Easy3D\build\include;C:\opt\ros\noetic\x64\include;E:\yamlcpp\yaml-cpp\include;E:\qt\5.9.1\msvc2015_64\bin;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>_CONSOLE;%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;NOMINMAX;WIN32_LEAN_AND_MEAN;VC_EXTRALEAN;_CRT_SECURE_NO_WARNINGS;_CRT_SECURE_NO_DEPRECATE;ELPP_FEATURE_ALL;ELPP_STL_LOGGING;ELPP_THREAD_SAFE;ELPP_NO_DEFAULT_LOG_FILE;ELPP_DISABLE_DEFAULT_CRASH_HANDLING;Easy3D_RESOURCE_DIR="E:/easy3D/Easy3D/resources";ELPP_AS_DLL;CMAKE_INTDIR="Release";_MBCS</PreprocessorDefinitions>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>E:\easy3D\Easy3D\build\lib\Release;C:\opt\ros\noetic\x64\Lib;E:\qt\5.9.1\msvc2015_64\lib\;E:\yamlcpp\yaml-cpp\build\Release;C:\opt\ros\noetic\x64\Lib\OGRE;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>E:\companyCode\companyLib.lib;C:\opt\ros\noetic\x64\Lib\Qt5Widgets.lib;C:\opt\ros\noetic\x64\Lib\roscpp.lib;C:\opt\ros\noetic\x64\Lib\boost_filesystem-vc140-mt.lib;C:\opt\ros\noetic\x64\Lib\rosconsole.lib;C:\opt\ros\noetic\x64\Lib\rosconsole_log4cxx.lib;C:\opt\ros\noetic\x64\Lib\rosconsole_backend_interface.lib;C:\opt\ros\noetic\x64\Lib\log4cxx.lib;C:\opt\ros\noetic\x64\Lib\boost_regex-vc140-mt.lib;C:\opt\ros\noetic\x64\Lib\roscpp_serialization.lib;C:\opt\ros\noetic\x64\Lib\xmlrpcpp.lib;C:\opt\ros\noetic\x64\Lib\rostime.lib;C:\opt\ros\noetic\x64\Lib\cpp_common.lib;C:\opt\ros\noetic\x64\Lib\boost_system-vc140-mt.lib;C:\opt\ros\noetic\x64\Lib\boost_thread-vc140-mt.lib;C:\opt\ros\noetic\x64\Lib\boost_chrono-vc140-mt.lib;C:\opt\ros\noetic\x64\Lib\boost_date_time-vc140-mt.lib;C:\opt\ros\noetic\x64\Lib\boost_atomic-vc140-mt.lib;C:\opt\ros\noetic\x64\Lib\console_bridge.lib;C:\opt\ros\noetic\x64\Lib\Qt5Gui.lib;C:\opt\ros\noetic\x64\Lib\Qt5Core.lib;yaml-cpp.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;$(Qt_LIBS_);E:\qt\5.9.1\msvc2015_64\lib\Qt5OpenGL.lib;easy3d_kdtree.lib;easy3d_algo.lib;easy3d_fileio.lib;easy3d_gui.lib;easy3d_renderer.lib;easy3d_viewer.lib;easy3d_core.lib;easy3d_util.lib;opengl32.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <Optimization>MaxSpeed</Optimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="resources\language\linguist.cpp" />
+    <ClCompile Include="src\dialog\dialog_easy3d\dialog.cpp" />
+    <ClCompile Include="src\dialog\dialog_easy3d\dialog_photo.cpp" />
+    <ClCompile Include="src\dialog\dialog_easy3d\dialog_poisson_reconstruction.cpp" />
+    <ClCompile Include="src\dialog\dialog_easy3d\dialog_snapshot.cpp" />
+    <ClCompile Include="src\dialog\dialog_easy3d\dialog_walk_through.cpp" />
+    <ClCompile Include="src\dialog\dialog_easy3d\walk_through.cpp" />
+    <ClCompile Include="src\dialog\dialog_gui\dialog_gcp_report.cpp" />
+    <ClCompile Include="src\dialog\dialog_gui\dialog_manual.cpp" />
+    <ClCompile Include="src\dialog\dialog_gui\loginWindow.cpp" />
+    <ClCompile Include="src\extern\colourise.cpp" />
+    <ClCompile Include="src\extern\gcp.cpp" />
+    <ClCompile Include="src\extern\login.cpp" />
+    <ClCompile Include="src\extern\loginOne.cpp" />
+    <ClCompile Include="src\extern\mergeMp4.cpp" />
+    <ClCompile Include="src\extern\stopWatch.cpp" />
+    <ClCompile Include="src\dialog\dialog_gui\dialog_gcp.cpp" />
+    <ClCompile Include="src\dialog\dialog_gui\loginWindowOne.cpp" />
+    <ClCompile Include="src\dialog\dialog_gui\dialog_rtk_coor.cpp" />
+    <ClCompile Include="src\dialog\dialog_gui\startFolder.cpp" />
+    <ClCompile Include="src\widgets\widget_gui\terminal.cpp" />
+    <ClCompile Include="src\extern\timer.cpp" />
+    <ClCompile Include="src\gui\viewer.cpp" />
+    <ClCompile Include="src\gui\viewer_snapshot.cpp" />
+    <ClCompile Include="src\tools\easy3d_tools\tool.cpp" />
+    <ClCompile Include="src\tools\easy3d_tools\tool_manager.cpp" />
+    <ClCompile Include="src\tools\easy3d_tools\tool_selection_point_cloud.cpp" />
+    <ClCompile Include="src\tools\easy3d_tools\tool_selection_surface_mesh.cpp" />
+    <ClCompile Include="src\tools\process\processBag.cpp" />
+    <ClCompile Include="src\dialog\dialog_easy3d\sampling.cpp" />
+    <ClCompile Include="src\extern\mainwindowSetting.cpp" />
+    <ClCompile Include="src\widgets\widget_easy3d\widget_checker_sphere.cpp" />
+    <ClCompile Include="src\widgets\widget_easy3d\widget_drawable.cpp" />
+    <ClCompile Include="src\widgets\widget_easy3d\widget_drawable_points.cpp" />
+    <ClCompile Include="src\widgets\widget_easy3d\widget_drawable_triangles.cpp" />
+    <ClCompile Include="src\widgets\widget_easy3d\widget_global_setting.cpp" />
+    <ClCompile Include="src\widgets\widget_easy3d\widget_model_list.cpp" />
+    <ClCompile Include="src\widgets\widget_gui\widget_viewProcess.cpp" />
+    <ClCompile Include="src\widgets\widget_gui\widget_startProcess.cpp" />
+    <ClCompile Include="src\widgets\widget_gui\widget_newProcess.cpp" />
+    <QtUic Include="src\ui\ui_dialog\dialog_gcp.ui" />
+    <QtUic Include="src\ui\ui_dialog\dialog_gcp_report.ui" />
+    <QtUic Include="src\ui\ui_dialog\dialog_manual.ui" />
+    <QtUic Include="src\ui\ui_dialog\dialog_rtk_coor.ui" />
+    <QtUic Include="src\ui\ui_dialog\loginWindowOne.ui" />
+    <QtUic Include="src\ui\ui_dialog\startFolder.ui" />
+    <QtUic Include="src\ui\ui_widget\terminal.ui" />
+    <QtUic Include="src\ui\ui_dialog\dialog_photo.ui" />
+    <QtUic Include="src\ui\ui_dialog\dialog_poisson_reconstruction.ui" />
+    <QtUic Include="src\ui\ui_dialog\dialog_snapshot.ui" />
+    <QtUic Include="src\ui\ui_dialog\dialog_walk_through.ui" />
+    <QtUic Include="src\ui\ui_dialog\mainwindowSetting.ui" />
+    <QtUic Include="src\ui\ui_dialog\login.ui" />
+    <QtUic Include="src\ui\ui_dialog\sampling.ui" />
+    <QtUic Include="src\ui\ui_gui\mainApp.ui" />
+    <QtMoc Include="src\include\include_gui\mainApp.h" />
+    <ClCompile Include="src\gui\mainApp.cpp" />
+    <ClCompile Include="main.cpp" />
+    <QtUic Include="src\ui\ui_widget\widget_drawable_points.ui" />
+    <QtUic Include="src\ui\ui_widget\widget_drawable_triangles.ui" />
+    <QtUic Include="src\ui\ui_widget\widget_global_setting.ui" />
+    <QtUic Include="src\ui\ui_widget\widget_newProcess.ui" />
+    <QtUic Include="src\ui\ui_widget\widget_startProcess.ui" />
+    <QtUic Include="src\ui\ui_widget\widget_viewProcess.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="resources\qrc\mainApp.qrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="src\include\include_gui\widget_newProcess.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="src\include\include_gui\widget_startProcess.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="src\include\include_gui\widget_viewProcess.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="src\include\include_process\processBag.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="src\include\include_gui\startFolder.h" />
+    <QtMoc Include="src\include\include_gui\dialog_rtk_coor.h" />
+    <QtMoc Include="src\include\include_process\loginOne.h" />
+    <QtMoc Include="src\include\include_process\loginWindowOne.h" />
+    <QtMoc Include="src\include\include_gui\dialog_gcp.h" />
+    <QtMoc Include="src\include\include_gui\mainwindowSetting.h" />
+    <QtMoc Include="resources\language\linguist.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="src\control_authentity\framework.h" />
+    <ClInclude Include="src\control_authentity\md5.hpp" />
+    <ClInclude Include="src\control_authentity\pch.h" />
+    <ClInclude Include="src\control_authentity\tool.h" />
+    <ClInclude Include="src\control_authentity\company.h" />
+    <QtMoc Include="src\include\include_easy3d\dialog\dialog.h" />
+    <QtMoc Include="src\include\include_easy3d\dialog\dialog_photo.h" />
+    <QtMoc Include="src\include\include_easy3d\dialog\dialog_snapshot.h" />
+    <QtMoc Include="src\include\include_easy3d\dialog\dialog_poisson_reconstruction.h" />
+    <QtMoc Include="src\include\include_easy3d\dialog\dialog_walk_through.h" />
+    <QtMoc Include="src\include\include_gui\terminal.h" />
+    <ClInclude Include="src\include\include_easy3d\dialog\walk_through.h" />
+    <ClInclude Include="src\include\include_easy3d\tools\canvas.h" />
+    <ClInclude Include="src\include\include_easy3d\tools\tool.h" />
+    <ClInclude Include="src\include\include_easy3d\tools\tool_manager.h" />
+    <ClInclude Include="src\include\include_easy3d\tools\tool_selection_point_cloud.h" />
+    <ClInclude Include="src\include\include_easy3d\tools\tool_selection_surface_mesh.h" />
+    <QtMoc Include="src\include\include_easy3d\dialog\sampling.h" />
+    <QtMoc Include="src\include\include_gui\gcp.h" />
+    <QtMoc Include="src\include\include_easy3d\widgets\widget_drawable_triangles.h" />
+    <QtMoc Include="src\include\include_gui\dialog_gcp_report.h" />
+    <QtMoc Include="src\include\include_gui\dialog_manual.h" />
+    <ClInclude Include="src\include\include_gui\stopWatch.h" />
+    <ClInclude Include="src\include\include_gui\Yuan.h" />
+    <QtMoc Include="src\include\include_gui\colourise.h" />
+    <QtMoc Include="src\include\include_gui\mergeMp4.h" />
+    <QtMoc Include="src\include\include_process\login.h" />
+    <QtMoc Include="src\include\include_process\loginWindow.h" />
+    <QtMoc Include="src\include\include_process\timer.h" />
+    <QtMoc Include="src\include\include_easy3d\widgets\widget_checker_sphere.h" />
+    <QtMoc Include="src\include\include_easy3d\widgets\widget_drawable.h" />
+    <QtMoc Include="src\include\include_easy3d\widgets\widget_drawable_points.h" />
+    <QtMoc Include="src\include\include_easy3d\widgets\widget_global_setting.h" />
+    <QtMoc Include="src\include\include_easy3d\widgets\widget_model_list.h" />
+    <QtMoc Include="src\include\include_easy3d\viewer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtTranslation Include="resources\language\Translation_en.ts" />
+    <QtTranslation Include="resources\language\Translation_zh.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="mainApp.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>terminalClass</class>
+ <widget class="QWidget" name="terminalClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>350</width>
+    <height>250</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>terminal</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget{background:#2b2b2b}
+
+
+
+ QScrollArea {
+        border: none;
+	    background: red;
+    }
+
+    QScrollBar {
+        background: #1c1c1c;
+        
+    }
+
+    QScrollBar:horizontal {
+        height: 10px;
+    }
+
+    QScrollBar:vertical {
+        width: 10px;
+    }
+
+    QScrollBar::handle {
+        background:#2b2b2b;
+        border-radius: 5px;
+    }
+
+
+	QScrollBar::handle:horizontal {
+
+        width: 5px;
+    }
+	QScrollBar::handle:vertical {
+
+        width: 5px;
+    }
+ 	QScrollBar::add-page, QScrollBar::sub-page {
+
+	    background: none;
+    }
+    QScrollBar::handle::pressed {
+        background:#faa028;
+    }
+
+QPushButton{border:none} QPushButton{color:#ffffff} QPushButton::hover{color:#faa028} QPushButton::pressed{color:#ffffff} </string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout" stretch="0,0">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item alignment="Qt::AlignLeft">
+      <widget class="QPushButton" name="btnClear">
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial Black</family>
+         <pointsize>11</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>clear</string>
+       </property>
+      </widget>
+     </item>
+     <item alignment="Qt::AlignRight">
+      <widget class="QPushButton" name="btnClose">
+       <property name="minimumSize">
+        <size>
+         <width>60</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial Black</family>
+         <pointsize>11</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>close</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QListWidget" name="listWidget">
+     <property name="styleSheet">
+      <string notr="true">QListWidget{background-color:#1c1c1c;
+border:none;
+color:#d9d7d7;
+}
+
+
+</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

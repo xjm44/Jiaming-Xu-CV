@@ -1,0 +1,34 @@
+<RCC>
+    <qresource prefix="/mainApp">
+        <file>resources/images/background1.png</file>
+        <file>resources/images/background2.png</file>
+        <file>resources/images/background3.png</file>
+        <file>resources/images/background4.png</file>
+        <file>resources/images/background5.png</file>
+        <file>resources/images/background6.png</file>
+        <file>resources/images/close.png</file>
+        <file>resources/images/close1.png</file>
+        <file>resources/images/closenew.png</file>
+        <file>resources/images/icon.png</file>
+        <file>resources/images/icon1.png</file>
+        <file>resources/images/icon2.png</file>
+        <file>resources/images/icon3.png</file>
+        <file>resources/images/icon4.png</file>
+        <file>resources/images/images.rar</file>
+        <file>resources/images/logo.png</file>
+        <file>resources/images/max.png</file>
+        <file>resources/images/max1.png</file>
+        <file>resources/images/maxnew.png</file>
+        <file>resources/images/minimize.png</file>
+        <file>resources/images/minimize1.png</file>
+        <file>resources/images/minimizenew.png</file>
+        <file>resources/images/new_logo.png</file>
+        <file>resources/images/new_title.png</file>
+        <file>resources/images/new_title1.png</file>
+        <file>resources/images/new_title2.png</file>
+        <file>resources/images/openbtn.png</file>
+        <file>resources/images/runbtn.png</file>
+        <file>resources/images/titlelogo.png</file>
+        <file>resources/images/new_logo1.png</file>
+    </qresource>
+</RCC>

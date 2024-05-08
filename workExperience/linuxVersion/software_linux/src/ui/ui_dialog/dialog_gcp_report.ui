@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>dialog_gcp_reportClass</class>
+ <widget class="QDialog" name="dialog_gcp_reportClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>794</width>
+    <height>509</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Gcp Report</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+
+
+
+
+/*
+
+QWidget#dialog_gcpClass{background-color: #1c1c1c}
+
+
+*/
+
+
+
+
+
+
+
+    QScrollBar {
+        background: #1c1c1c;
+        
+    }
+
+    QScrollBar:horizontal {
+        height: 10px;
+    }
+
+    QScrollBar:vertical {
+        width: 10px;
+    }
+
+    QScrollBar::handle {
+        background:#646464;;
+        border-radius: 2px;
+    }
+ 	QScrollBar::add-page, QScrollBar::sub-page {
+
+	    background: none;
+    }
+
+    QScrollBar::handle::pressed {
+        background:#faa028;
+    }
+
+</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_4">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QWidget" name="widget" native="true">
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QFrame" name="frame">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">
+
+QHeaderView::section {
+    background-color: #646464;
+	color: #ffffff;
+    font-size: 15pt;
+    
+	border:  1px solid #ffffff;
+
+    height: 35px;
+    width: 50px; 
+}
+
+/*
+QHeaderView::section:horizontal
+{
+
+}
+
+QHeaderView::section:vertical
+{
+}
+*/
+
+
+
+QTableView { outline:none; color:black; background-color:#ffffff}
+
+QTableView::item:selected:focus { 
+color:black;background:transparent; 
+border: 1px solid #646464;
+}
+QTableView::item:!selected:focus { background:transparent; }
+
+/*QTableView::item:selected{
+background-color:#646464; 
+background-color:red;
+
+
+color:white}*/
+
+QTableView QLineEdit { color:#ffffff; background-color:#646464}
+
+</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <item>
+            <widget class="QTableWidget" name="tableWidget">
+             <property name="font">
+              <font>
+               <family>Arial</family>
+               <pointsize>12</pointsize>
+               <weight>50</weight>
+               <bold>false</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="sizeAdjustPolicy">
+              <enum>QAbstractScrollArea::AdjustToContents</enum>
+             </property>
+             <property name="cornerButtonEnabled">
+              <bool>false</bool>
+             </property>
+             <column>
+              <property name="text">
+               <string>x</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>y</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>z</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>real_x</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>real_y</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>real_z</string>
+              </property>
+             </column>
+             <column>
+              <property name="text">
+               <string>result</string>
+              </property>
+             </column>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item alignment="Qt::AlignBottom">
+         <widget class="QFrame" name="frame_2">
+          <property name="styleSheet">
+           <string notr="true">QPushButton{border:none; background:#2b2b2b} 
+QPushButton{color:#ffffff} 
+QPushButton::hover{color:#faa028} 
+QPushButton::pressed{color:#ffffff}  </string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout">
+             <item>
+              <spacer name="horizontalSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButtonSave">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>200</width>
+                 <height>30</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Arial Black</family>
+                 <pointsize>11</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string>Save as .csv</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_2">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

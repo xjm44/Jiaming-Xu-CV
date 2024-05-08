@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1B343887-93FD-47CA-8DB1-7D7D7A7D1E08}</ProjectGuid>
+    <Keyword>QtVS_v304</Keyword>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
+    <QtInstall>5.9.1_msvc2015_64</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+    <QtBuildConfig>debug</QtBuildConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
+    <QtInstall>5.9.1_msvc2015_64</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+    <QtBuildConfig>release</QtBuildConfig>
+  </PropertyGroup>
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(QtMsBuild)\Qt.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>E:\vcpkg\vcpkg\installed\x64-windows\include;C:\Program Files\PDFHUMMUS\include;C:\Program Files\PDFHUMMUS\include\PDFWriter;E:\vcpkg\vcpkg\installed\x64-windows\include\vtk-9.2;E:\osgQt\osgQt\install\include;E:\OpenSceneGraph\OpenSceneGraph\install\include;%(AdditionalIncludeDirectories);$(Qt_INCLUDEPATH_)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_WINDOWS;_WIN32_WINNT=0x0A00;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
+      <FunctionLevelLinking>
+      </FunctionLevelLinking>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>C:\Program Files\PDFHUMMUS\lib;E:\osgQt\osgQt\install\lib;C:\opt\ros\noetic\x64\Lib;E:\OpenSceneGraph\OpenSceneGraph\install\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>E:\companyCode\companyLib.lib;C:\opt\ros\noetic\x64\Lib\Qt5Widgets.lib;C:\opt\ros\noetic\x64\Lib\roscpp.lib;C:\opt\ros\noetic\x64\Lib\boost_filesystem-vc140-mt.lib;C:\opt\ros\noetic\x64\Lib\rosconsole.lib;C:\opt\ros\noetic\x64\Lib\rosconsole_log4cxx.lib;C:\opt\ros\noetic\x64\Lib\rosconsole_backend_interface.lib;C:\opt\ros\noetic\x64\Lib\log4cxx.lib;C:\opt\ros\noetic\x64\Lib\boost_regex-vc140-mt.lib;C:\opt\ros\noetic\x64\Lib\roscpp_serialization.lib;C:\opt\ros\noetic\x64\Lib\xmlrpcpp.lib;C:\opt\ros\noetic\x64\Lib\rostime.lib;C:\opt\ros\noetic\x64\Lib\cpp_common.lib;C:\opt\ros\noetic\x64\Lib\boost_system-vc140-mt.lib;C:\opt\ros\noetic\x64\Lib\boost_thread-vc140-mt.lib;C:\opt\ros\noetic\x64\Lib\boost_chrono-vc140-mt.lib;C:\opt\ros\noetic\x64\Lib\boost_date_time-vc140-mt.lib;C:\opt\ros\noetic\x64\Lib\boost_atomic-vc140-mt.lib;C:\opt\ros\noetic\x64\Lib\console_bridge.lib;C:\opt\ros\noetic\x64\Lib\Qt5Gui.lib;C:\opt\ros\noetic\x64\Lib\Qt5Core.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;osg.lib;osgGA.lib;osgDB.lib;osgViewer.lib;osgText.lib;osgUtil.lib;OpenThreads.lib;osgFX.lib;osgUI.lib;osgAnimation.lib;osgManipulator.lib;osgParticle.lib;osgQOpenGL.lib;osgSim.lib;FreeType.lib;
+LibAesgm.lib;
+LibJpeg.lib;
+LibPng.lib
+;LibTiff.lib
+;PDFWriter.lib
+;Zlib.lib;%(AdditionalDependencies);$(Qt_LIBS_)</AdditionalDependencies>
+      <AdditionalOptions>/FORCE:MULTIPLE %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="Configuration">
+    <ClCompile>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <Optimization>MaxSpeed</Optimization>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\osg\osgAlgorithm.cpp" />
+    <ClCompile Include="src\osg\osgCapture.cpp" />
+    <ClCompile Include="src\osg\osgColor.cpp" />
+    <ClCompile Include="src\osg\osgHudCallback.cpp" />
+    <ClCompile Include="src\osg\osgLodHandler.cpp" />
+    <ClCompile Include="src\osg\osgPlaneExtraction.cpp" />
+    <ClCompile Include="src\osg\osgScreenShot.cpp" />
+    <ClCompile Include="src\osg\osgTrim.cpp" />
+    <ClCompile Include="src\osg\pickPhoto.cpp" />
+    <ClCompile Include="src\windows\gui.cpp" />
+    <ClCompile Include="src\windows\login.cpp" />
+    <ClCompile Include="src\osg\osgCloudData.cpp" />
+    <ClCompile Include="src\osg\osgview.cpp" />
+    <ClCompile Include="src\osg\pickHandler.cpp" />
+    <ClCompile Include="src\windows\picture.cpp" />
+    <ClCompile Include="src\windows\report.cpp" />
+    <ClCompile Include="src\windows\timer.cpp" />
+    <ClCompile Include="src\windows\treatment.cpp" />
+    <ClCompile Include="src\windows\windowLogin.cpp" />
+    <QtRcc Include="mainApp.qrc" />
+    <ClCompile Include="main.cpp" />
+    <QtRcc Include="src\ui\icons.qrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\control\framework.h" />
+    <ClInclude Include="src\control\md5.hpp" />
+    <ClInclude Include="src\control\pch.h" />
+    <ClInclude Include="src\control\tool.h" />
+    <ClInclude Include="src\control\company.h" />
+    <ClInclude Include="src\include\colormap.h" />
+    <ClInclude Include="src\include\findGeode.h" />
+    <ClInclude Include="src\include\osgAlgorithm.h" />
+    <ClInclude Include="src\include\osgCapture.h" />
+    <ClInclude Include="src\include\osgCloudData.h" />
+    <ClInclude Include="src\include\osgColor.h" />
+    <ClInclude Include="src\include\osgHudCallback.h" />
+    <ClInclude Include="src\include\osgLod.h" />
+    <ClInclude Include="src\include\osgPlaneExtraction.h" />
+    <ClInclude Include="src\include\osgScreenShot.h" />
+    <ClInclude Include="src\include\osgTrim.h" />
+    <ClInclude Include="src\include\osgview.h" />
+    <ClInclude Include="src\include\pickHandler.h" />
+    <ClInclude Include="src\include\pickPhoto.h" />
+    <QtMoc Include="src\include\report.h" />
+    <QtMoc Include="src\include\treatment.h" />
+    <QtMoc Include="src\include\picture.h" />
+    <QtMoc Include="src\include\windowLogin.h" />
+    <QtMoc Include="src\include\timer.h" />
+    <QtMoc Include="src\include\login.h" />
+    <QtMoc Include="src\include\gui.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="src\ui\gui.ui" />
+    <QtUic Include="src\ui\login.ui" />
+    <QtUic Include="src\ui\picture.ui" />
+    <QtUic Include="src\ui\report.ui" />
+    <QtUic Include="src\ui\treatment.ui" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
